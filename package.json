@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typescript:watch": "tsc --watch --noEmit"
+    "typescript:watch": "tsc --watch --noEmit",
+    "export": "next export"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -75,5 +76,8 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^15.0.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

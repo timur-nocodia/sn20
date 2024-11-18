@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: false,
   },
@@ -15,10 +17,9 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   images: {
-    unoptimized: false,
+    unoptimized: true,
     minimumCacheTTL: 60,
   },
-  // Global page performance
   poweredByHeader: false,
   compress: true,
   productionBrowserSourceMaps: false,
