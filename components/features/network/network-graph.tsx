@@ -265,7 +265,7 @@ export default function NetworkGraph() {
         initialScale={1}
         minScale={0.5}
         maxScale={2}
-        wheel={{ wheelEnabled: true }}
+        wheel={{ wheelDisabled: true }}
         centerOnInit={true}
       >
         {({ zoomIn, zoomOut }) => (

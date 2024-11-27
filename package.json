@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "typescript:watch": "tsc --watch --noEmit",
-    "export": "next export"
+    "export": "next export",
+    "typecheck": "tsc --noEmit",
+    "prebuild": "npm run typecheck && npm run lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
