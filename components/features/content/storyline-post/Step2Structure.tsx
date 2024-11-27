@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { Plus } from 'lucide-react';
-import { Button } from '@/ui/button';
-import { Card } from '@/ui/card';
-import { ScrollArea } from '@/ui/scroll-area';
+import { Button } from '@/components/ui-components/button';
+import { Card } from '@/components/ui-components/card';
+import { ScrollArea } from '@/components/ui-components/scroll-area';
 import StoryCard from './StoryCard';
 import RecommendationsPanel from './RecommendationsPanel';
 import type { Story } from './types';
@@ -48,7 +48,7 @@ export default function Step2Structure({
     if (stories.length === 0) {
       setStories(dummyStories);
     }
-  }, []); // Empty dependency array since we only want this to run once
+  }, [stories.length, setStories]); // Added missing dependencies
 
   const handleDragStart = (story: Story) => {
     setDraggedStory(story);
